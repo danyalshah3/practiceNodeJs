@@ -1,7 +1,13 @@
-const http = require('http')
+const express = require('express')
 
-http.createServer(function(req, res){
+const app = express()
 
-    res.end('This is about Express framework')
-    
-}).listen(3000)
+app.get('/' , function(req, res){
+
+    res.end("This is hello world in homepage using expressjs")
+
+})
+
+app.listen(3000, function(){
+    console.log('connection successfull')
+})
